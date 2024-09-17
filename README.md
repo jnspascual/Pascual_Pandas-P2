@@ -38,35 +38,35 @@ d. Determine how many cylinders ('cyl') and what gear type ('gear') do the model
 
 **Python code:**
 
-import pandas as pd #Access the Pandas library 
+import pandas as pd _#Access the Pandas library_ 
 
-cars = pd.read_csv('cars.csv') #Load the .csv file into a DataFrame called 'cars'
+cars = pd.read_csv('cars.csv') _#Load the .csv file into a DataFrame called 'cars'_
 
-cars #Display the DataFrame 'cars'
+cars _#Display the DataFrame 'cars'_
 
-odd_columns = cars.iloc[:, ::2]  #Check all the rows in the DataFrame and select columns which are odd numbered, and assign it to odd_columns
+odd_columns = cars.iloc[:, ::2]  _#Check all the rows in the DataFrame and select columns which are odd numbered, and assign it to odd_columns_
 
-print("Here are the first five rows with odd-numbered columns:") #Present a statement introducing the first 5 rows with odd-numbered columns of the DataFrame
+print("Here are the first five rows with odd-numbered columns:") _#Present a statement introducing the first 5 rows with odd-numbered columns of the DataFrame_
 
-print(odd_columns.head()) #Display the first 5 rows of the DataFrame 'cars'
+print(odd_columns.head()) _#Display the first 5 rows of the DataFrame 'cars'_
 
-mazdarx4_row = cars[cars['Model'] == 'Mazda RX4'] #Check for the Model of the Mazda RX4 and assign it to a mazdarx4_row 
+mazdarx4_row = cars[cars['Model'] == 'Mazda RX4'] _#Check for the Model of the Mazda RX4 and assign it to a mazdarx4_row_ 
 
-print("Row containing the Model of Mazda RX4:") #Present a statement introducing the Model of Mazda RX4
+print("Row containing the Model of Mazda RX4:") _#Present a statement introducing the Model of Mazda RX4_
 
-print(mazdarx4_row) #Display the row containing the Model of Mazda RX4
+print(mazdarx4_row) _#Display the row containing the Model of Mazda RX4_
 
-camaroz28_cylinders = cars[cars['Model'] == 'Camaro Z28']['cyl'].iloc[0] #Starting at 0 index, check for the Model of Camaro Z28, then its cylinder, and assign it to camaroz28_cylinders
+camaroz28_cylinders = cars[cars['Model'] == 'Camaro Z28']['cyl'].iloc[0] _#Starting at 0 index, check for the Model of Camaro Z28, then its cylinder, and assign it to camaroz28_cylinders_
 
-print(f"Number of cylinders in Camaro Z28: {camaroz28_cylinders} cylinders") #Display the number of cylinders of the Camaro Z28
+print(f"Number of cylinders in Camaro Z28: {camaroz28_cylinders} cylinders") _#Display the number of cylinders of the Camaro Z28_
 
-target_models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic'] #Generate a DataFrame containing the selected cars, and assigning it to target_models
+target_models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic'] _#Generate a DataFrame containing the selected cars, and assigning it to target_models_
 
-info = cars[cars['Model'].isin(target_models)][['Model', 'cyl', 'gear']] #Check for the details of these cars, selecting specific information, and assigning it to info
+info = cars[cars['Model'].isin(target_models)][['Model', 'cyl', 'gear']] _#Check for the details of these cars, selecting specific information, and assigning it to info_
 
-print("Cylinders and gear type for the selected models:") #Present a statement introducing the cylinders and gear type for the selected models
+print("Cylinders and gear type for the selected models:") _#Present a statement introducing the cylinders and gear type for the selected models_
 
-print(info) #Display the DataFrame
+print(info) _#Display the DataFrame_
 
 ##
 
